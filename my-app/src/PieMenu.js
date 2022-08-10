@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
 
-function PieMenu(allThePies) {
+function PieMenu({items}) {
+  const pieItems = items.map(pie => <RenderPieMenu allThePies={pie} key={pie.id} />)
     
   return (
-    <div >
-             <div>
-                 <h1>DOGGO:</h1>
-                 <img src={allThePies.image} alt={allThePies.name} />
-                 <h2>{allThePies.name}</h2>
-                 <button>Good Dog!</button> 
-                 </div> 
-          </div>
-    );
+    <>
+        
+        
+    {/* <div className="App"> */}
+
+
+    <div  >    
+{pieItems}
+
+</div>
+
+
+</>
+  )
     }
    
     

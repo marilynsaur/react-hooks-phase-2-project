@@ -15,23 +15,22 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:3000/pies")
       .then((r) => r.json())
-      .then((items) => console.log(items));
+      .then((items) => setItems(items));
   }, []);
-
-  const pieItems = items.map(pie => <div allThePies={pie} key={pie.id}></div>)
-
+   console.log(items)
+ 
   return (
     <div>
       <NavBar />
       <Switch>
         <Route exact path="/PieMenu">
-          <PieMenu pieItems ={pieItems}/>
+          <PieMenu items ={items}/>
         </Route>
         <Route exact path="/login">
           <Login />
         </Route>
         <Route exact path="/OrderCart">
-          <OrderCart pieItems ={pieItems}/>
+          <OrderCart items ={items}/>
         </Route>
         <Route exact path="/">
           <Home />
