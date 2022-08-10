@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 
-function RenderPieMenu(OnePie) {
+function RenderPieMenu({OnePie}) {
 
-console.log(OnePie)
+console.log('individual pie', OnePie)
 
 return (
 <div >
