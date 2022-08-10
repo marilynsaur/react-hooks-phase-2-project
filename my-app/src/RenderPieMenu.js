@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from "react";
 
 
+function RenderPieMenu(OnePie) {
 
-function RenderPieMenu({pieItems}) {
-
-console.log(pieItems)
+console.log(OnePie)
 
 return (
 <div >
+    
          <div>
-             <h1>DOGGO:</h1>
-             <img src={pieItems.image} alt={pieItems.name} />
-             <h2>{pieItems.name}</h2>
-             <button>Good Dog!</button> 
+             <h1>Pie:</h1>
+             <h2>{OnePie.name}</h2>
+             <img src={OnePie.image} alt={OnePie.name}/>
+             <button>Good Pie!</button> 
              </div> 
+            
       </div>
+      
 );
 }
+
 
 export default RenderPieMenu;
