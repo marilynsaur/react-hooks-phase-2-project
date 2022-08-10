@@ -6,19 +6,16 @@ function RenderPieMenu({OnePie}) {
 console.log('individual pie', OnePie)
 
 return (
-<div >
-    
-         <div>
-             <h1>Pie:</h1>
-             <h2>{OnePie.name}</h2>
-             <img src={OnePie.image} alt={OnePie.name}/>
-             <button>Good Pie!</button> 
-             </div> 
-            
-      </div>
+<div className="card">
+        <h2 className="title">{OnePie.name}</h2>
+        <img src={OnePie.image} className="photo" />
+
+         </div>
+        
       
 );
 }
 
 
 export default RenderPieMenu;
+
