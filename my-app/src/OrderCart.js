@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function OrderCart({OnePie}) {
+function OrderCart({clickPie}) {
     const [isInCart, setIsInCart] = useState(false);
    
     function handleClick() {
@@ -11,8 +11,8 @@ function OrderCart({OnePie}) {
 
   return (
     <li className={isInCart ? "in-cart" : " "}>
-      <span>{OnePie.name}</span>
-      <span className="image">{OnePie.image}</span>
+      <span>{clickPie.name}</span>
+      <span className="image">{clickPie.image}</span>
      <button onClick={handleClick} className="add">{isInCart ? "in-cart" : "Add to Cart"}</button> 
       <li >
       </li> 

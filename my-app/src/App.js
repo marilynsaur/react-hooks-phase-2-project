@@ -34,13 +34,13 @@ function App() {
           <PieMenu items ={items} handleClick={handleClick}/>
         </Route>
         <Route exact path="/CustomOrder">
-          <CustomOrder items ={items} OnePie={OnePie}/>
+          <CustomOrder items ={items} />
         </Route>
         <Route exact path="/login">
           <Login />
         </Route>
         <Route exact path="/OrderCart">
-          <OrderCart items ={items}/>
+          <OrderCart items ={items} clickPie={clickPie}/>
         </Route>
         <Route exact path="/">
           <Home />
