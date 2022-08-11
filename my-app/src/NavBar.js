@@ -33,7 +33,7 @@ function NavBar() {
         exact
         style={linkStyles}
         activeStyle={{
-          background: "#DCE4F2",
+          background: "transparent",
         }}
       >
         Home
@@ -43,17 +43,27 @@ function NavBar() {
         exact
         style={linkStyles}
         activeStyle={{
-          background: "#DCE4F2",
+          background: "transparent",
         }}
       >
         Pie Menu
+      </NavLink>
+      <NavLink 
+        to="/CustomOrder"
+        exact
+        style={linkStyles}
+        activeStyle={{
+          background: "transparent",
+        }}
+      >
+        Custom Order
       </NavLink>
       <NavLink
         to="/OrderCart"
         exact
         style={linkStyles}
         activeStyle={{
-          background:  "#DCE4F2",
+          background:  "transparent",
         }}
       >
         Order Cart
@@ -63,7 +73,7 @@ function NavBar() {
         exact
         style={linkStyles}
         activeStyle={{
-          background:  "#DCE4F2",
+          background:  "transparent",
         }}
       >
         Login

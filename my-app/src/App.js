@@ -5,11 +5,18 @@ import PieMenu from "./PieMenu";
 import Login from "./Login";
 import NavBar from "./NavBar";
 import OrderCart from "./OrderCart";
+import CustomOrder from "./CustomOrder";
 
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [items, setItems] = useState([]);
+
+  const [clickPie,setClickPie]= useState(null);
+  
+  function handleClick(OnePie){
+    setClickPie(OnePie)
+  };
 
   // Add useEffect hook
   useEffect(() => {
@@ -24,7 +31,10 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/PieMenu">
-          <PieMenu items ={items}/>
+          <PieMenu items ={items} handleClick={handleClick}/>
+        </Route>
+        <Route exact path="/CustomOrder">
+          <CustomOrder items ={items} OnePie={OnePie}/>
         </Route>
         <Route exact path="/login">
           <Login />
