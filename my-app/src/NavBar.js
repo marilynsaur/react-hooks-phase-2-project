@@ -26,7 +26,7 @@ const bigBanner = {
 function NavBar() {
   return (
     <div>
-         <div >
+         <div className="navbar__item" >
      <img src={pieFont} alt="pieFont" />
       <NavLink 
         to="/"
