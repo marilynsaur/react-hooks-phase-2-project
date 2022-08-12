@@ -34,7 +34,7 @@ const title = {
         fontSize: "30px",
 }
 
-console.log('individual pie', OnePie)
+
 
 return (
 <div >

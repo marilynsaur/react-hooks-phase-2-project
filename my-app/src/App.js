@@ -12,11 +12,11 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [items, setItems] = useState([]);
 
-  const [clickPie,setClickPie]= useState(null);
+  // const [clickPie,setClickPie]= useState(null);
   
-  function handleClick(OnePie){
-    setClickPie(OnePie)
-  };
+  // function handleClick(OnePie){
+  //   setClickPie(OnePie)
+  // };
 
   // Add useEffect hook
   useEffect(() => {
@@ -31,7 +31,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/PieMenu">
-          <PieMenu items ={items} handleClick={handleClick}/>
+          <PieMenu items ={items} />
         </Route>
         <Route exact path="/CustomOrder">
           <CustomOrder items ={items} />
@@ -40,7 +40,7 @@ function App() {
           <Login />
         </Route>
         <Route exact path="/OrderCart">
-          <OrderCart items ={items} clickPie={clickPie}/>
+          <OrderCart items ={items} />
         </Route>
         <Route exact path="/">
           <Home />
