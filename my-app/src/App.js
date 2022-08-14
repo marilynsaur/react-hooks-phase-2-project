@@ -13,20 +13,20 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [items, setItems] = useState([]);
 
-  // const [clickPie,setClickPie]= useState(null);
-  
-  // function handleClick(OnePie){
-  //   setClickPie(OnePie)
-  // };
 
-  // Add useEffect hook
+  
   useEffect(() => {
     fetch("http://localhost:3000/pies")
       .then((r) => r.json())
       .then((items) => setItems(items));
   }, []);
-   console.log(items)
- 
+   
+
+
+   function handleFormSubmit(newItems){
+    setItems([...items,newItems])
+   }
+ console.log(items)
   return (
     <div>
       <CartProvider>
