@@ -6,6 +6,7 @@ import Login from "./Login";
 import NavBar from "./NavBar";
 import OrderCart from "./OrderCart";
 import CustomOrder from "./CustomOrder";
+import { CartProvider } from "./CartContext";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
  
   return (
     <div>
+      <CartProvider>
       <NavBar />
       <Switch>
         <Route exact path="/PieMenu">
@@ -46,7 +48,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
-    
+      </CartProvider>
     </div>
   );
 }
