@@ -1,32 +1,39 @@
 {
-    "pies": [
-      {
-        "id": 1,
-        "name": "cookie butter pie",
-        "image": "https://hips.hearstapps.com/del.h-cdn.co/assets/15/53/2048x1316/gallery-1451504602-cookie-butter-cheesecake-full-cake-horizontal.jpg?resize=980:*",
-        "description": "very tasty pie",
-        "price": 15.78
-      },
-      {
-        "id": 2,
-        "name": "brown sugar pecan pie",
-        "image": "https://www.challengedairy.com/sites/default/files/recipe/images/recipe_brown_sugar_pecan_pie_2280_0.jpg",
-        "description": "delicious pie",
-        "price": 20.67
-      },
-      {
-        "id": 3,
-        "name": "cherry pie",
-        "image": "https://tastesbetterfromscratch.com/wp-content/uploads/2020/04/Cherry-Pie-11.jpg",
-        "description": "A totally delightful pie",
-        "price": 18.00
-      },
-      {
-        "id": 4,
-        "name": "blueberry pie",
-        "image": "https://www.inspiredtaste.net/wp-content/uploads/2022/07/Easy-Homemade-Blueberry-Pie-2-1200.jpg",
-        "description": "A scrumptious pie!",
-        "price": 15.00
-      }
-    ]
-  }
+  "pies": [
+    {
+      "id": 1,
+      "name": "cookie butter pie",
+      "image": "https://hips.hearstapps.com/del.h-cdn.co/assets/15/53/2048x1316/gallery-1451504602-cookie-butter-cheesecake-full-cake-horizontal.jpg?resize=980:*",
+      "description": "very tasty pie",
+      "price": 15.78
+    },
+    {
+      "id": 2,
+      "name": "brown sugar pecan pie",
+      "image": "https://www.challengedairy.com/sites/default/files/recipe/images/recipe_brown_sugar_pecan_pie_2280_0.jpg",
+      "description": "delicious pie",
+      "price": 20.67
+    },
+    {
+      "id": 3,
+      "name": "cherry pie",
+      "image": "https://tastesbetterfromscratch.com/wp-content/uploads/2020/04/Cherry-Pie-11.jpg",
+      "description": "A totally delightful pie",
+      "price": 18
+    },
+    {
+      "id": 4,
+      "name": "blueberry pie",
+      "image": "https://www.inspiredtaste.net/wp-content/uploads/2022/07/Easy-Homemade-Blueberry-Pie-2-1200.jpg",
+      "description": "A scrumptious pie!",
+      "price": 15
+    },
+    {
+      "name": "strawberry",
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/strawberry-pie-recipe-1648660021.jpeg?crop=1.00xw:1.00xh;0,0&resize=980:*",
+      "description": "very good pie",
+      "price": "23",
+      "id": 5
+    }
+  ]
+}

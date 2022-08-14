@@ -3,6 +3,7 @@ import aboutheader from './aboutheader.png';
 
 
 function CustomOrder({onAddItem}) {
+  const [isInCart, setIsInCart] = useState(false);
 
   console.log(onAddItem)
   const [formData, setFormData] = useState({
@@ -44,6 +45,14 @@ function CustomOrder({onAddItem}) {
     .then((newNewItem) => onAddItem(newNewItem));
   }
 
+
+  function handleClick() {
+    setIsInCart((isInCart) => !isInCart);
+   
+     console.log('yay')
+   
+    }
+
   return (
 
     <div>
@@ -60,6 +69,7 @@ function CustomOrder({onAddItem}) {
         onChange={handleChange}
       />
        </label>
+      
        <label>
        description
       <input
@@ -69,6 +79,7 @@ function CustomOrder({onAddItem}) {
         onChange={handleChange}
       />
       </label>
+     
       <label>
       image
        <input
@@ -78,6 +89,7 @@ function CustomOrder({onAddItem}) {
         onChange={handleChange}
       />
        </label>
+     
        <label>
         price
       <input
@@ -87,19 +99,25 @@ function CustomOrder({onAddItem}) {
         onChange={handleChange}
       />
        </label>
-       <button type="submit">Add Question</button>
+       <br/>
+       <br/>
+       <button type="submit">Add A Custom Pie!</button>
     </form>
-    {/* <div className="card">
- <img src={OnePie.image} className="card__img"/>
+    
+   
+    <div className="wrapper">
+    <div className="card">
+ <img src={formData.image} className="card__img"/>
  <div className="card__body">
- <div className="card__title">{OnePie.name}</div>
-  <p className="card__description">{OnePie.description}</p>
-  <h3 className="card__price">{OnePie.price}</h3>
+ <div className="card__title">{formData.name}</div>
+  <p className="card__description">{formData.description}</p>
+  <h3 className="card__price">{formData.price}</h3>
 
 <button onClick={handleClick} className="card__btn">{isInCart ? "in-cart" : "Add to Cart"}</button> 
 </div>
-</div> */}
-  </div>
+</div>
+</div>
+</div>
  
  
   )}
