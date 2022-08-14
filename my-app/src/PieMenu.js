@@ -5,12 +5,12 @@ import {CartContext} from './CartContext';
 
 
 
-function PieMenu({items}) {
+function PieMenu({items,handleUpdateItem}) {
  
     const [cart,setCart] = useContext(CartContext);
     const totalPrice = cart.reduce((acc,curr) => acc + curr.price, 0)
   
-  const pieItems = items.map(pie => <RenderPieMenu OnePie={pie}  key={pie.id}  />)
+  const pieItems = items.map(pie => <RenderPieMenu OnePie={pie}  key={pie.id} handleUpdateItem={handleUpdateItem} />)
   
 
 

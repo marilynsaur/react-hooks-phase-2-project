@@ -22,21 +22,30 @@ function App() {
   }, []);
    
 
+  function handleUpdateItem(updatedItem) {
+    console.log("In ShoppingCart:", updatedItem);
+  }
 
-   function handleFormSubmit(newItems){
-    setItems([...items,newItems])
-   }
- console.log(items)
+   
+
+  
+
+  function handleAddItem(newItem) {
+    console.log("In ShoppingList:", newItem);
+    let allItems=[...items,newItem]
+    setItems(allItems)
+  }
+
   return (
     <div>
       <CartProvider>
       <NavBar />
       <Switch>
         <Route exact path="/PieMenu">
-          <PieMenu items ={items} />
+          <PieMenu items ={items} handleUpdateItem={handleAddItem} />
         </Route>
         <Route exact path="/CustomOrder">
-          <CustomOrder items ={items} />
+          <CustomOrder onAddItem={handleAddItem} />
         </Route>
         <Route exact path="/login">
           <Login />
