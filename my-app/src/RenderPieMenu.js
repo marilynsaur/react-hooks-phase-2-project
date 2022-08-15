@@ -4,21 +4,38 @@ import {CartContext} from './CartContext';
 
 
 
-function RenderPieMenu({OnePie}) {
+function RenderPieMenu({OnePie,onDeleteItem}) {
   const [isInCart, setIsInCart] = useState(false);
   const [cart,setCart] = useContext(CartContext);
    
   function handleClick() {
+    
   setIsInCart((isInCart) => !isInCart);
   const addPie = {name:OnePie.name, price:OnePie.price,image:OnePie.image,description:OnePie.description};
    console.log('i was clicked')
    setCart(curr =>[...curr,addPie]);
   }
 
+  function handleDeleteClick(onDeleteItem) {
+    console.log(onDeleteItem);
+  }
+
+  function handleDeleteClick() {
+    fetch(`http://localhost:3000/pies/${OnePie.id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then(() => onDeleteItem(OnePie.filter(item => id !== item.id )));
+  }
+
 return (
   
   
 <div className="card">
+  
+  <div>
+<button className="card__btn" onClick={handleDeleteClick}>X</button>
+</div>
  <img src={OnePie.image} className="card__img"/>
  <div className="card__body">
  <div className="card__title">{OnePie.name}</div>
@@ -27,14 +44,7 @@ return (
 
 <button onClick={handleClick} className="card__btn">{isInCart ? "in-cart" : "Add to Cart"}</button> 
 </div>
-</div>
-
-
-
-
-   
-
-      
+</div>    
 );
 }
 

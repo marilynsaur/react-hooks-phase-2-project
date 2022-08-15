@@ -15,6 +15,7 @@ function CustomOrder({onAddItem}) {
     
   });
 
+ 
   function handleChange(event) {
     setFormData({
       ...formData,
@@ -54,56 +55,35 @@ function CustomOrder({onAddItem}) {
     }
 
   return (
-
-    <div>
+ 
+    <div className="center">
+       <h3>Not seeing a Pie you want? have Our bakers create a custom Pie for you!</h3>
  <header><img src={aboutheader} alt="aboutheader" /></header>
-    <form  onSubmit={handleSubmit}>
-    <label>
-      name
-      <input
-       
-        type="text"
-        id="name"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-      />
-       </label>
-      
-       <label>
-       description
-      <input
-        type="text"
-        id="description"
-        value={formData.description}
-        onChange={handleChange}
-      />
-      </label>
-     
-      <label>
-      image
-       <input
-        type="text"
-        id="image"
-        value={formData.image}
-        onChange={handleChange}
-      />
-       </label>
-     
-       <label>
-        price
-      <input
-        type="text"
-        id="price"
-        value={formData.price}
-        onChange={handleChange}
-      />
-       </label>
-       <br/>
-       <br/>
-       <button type="submit">Add A Custom Pie!</button>
-    </form>
-    
+    <form  className="App"onSubmit={handleSubmit}>
+
+
+  <label >Name:</label>
+  <input type="text"id="name" value={formData.name}
+        onChange={handleChange}name="name"/>
+  <label >Image:</label>
+  <input type="text" id="image" value={formData.image}
+   onChange={handleChange} name="image"/>
+   
+  <label >Description:</label>
+  <input id="description" value={formData.description}
+   onChange={handleChange}name="description"></input>
+ 
+  <label>price:</label>
+  <input id="price"  value={formData.price}
+   onChange={handleChange} name="price"></input>  
+   <br/>
+   <br/>
+  <button type="submit">Add A Custom Pie</button>
+  </form>
+
+
+
+
    
     <div className="wrapper">
     <div className="card">
@@ -122,3 +102,5 @@ function CustomOrder({onAddItem}) {
  
   )}
 export default CustomOrder;
+
+

@@ -31,6 +31,23 @@ body {
      justify-content: center;
      
    }
+
+   .center {
+    text-align: center;
+    font-size: 1.4rem;
+    color: black;
+    padding: 10px;
+   }
+
+   .App {
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    max-width: 600px;
+    background: var(--background);
+    color: var(--font-color);
+    box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.2);
+    border-radius: 10px;
+  }
    
    .card {
      box-shadow: 0 0 10px 5px gray;

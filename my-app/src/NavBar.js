@@ -12,8 +12,9 @@ const linkStyles = {
   fontFamily: "Helvetica",
   color: "black",
   textAlign: "center",
-  verticalAlign: "middle",
-  fontWeight: "300",
+  fontSize: "20px",
+  
+  float: "right",
 };
 
 const bigBanner = {
@@ -57,16 +58,6 @@ function NavBar() {
         }}
       >
         Custom Order
-      </NavLink>
-      <NavLink
-        to="/OrderCart"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background:  "transparent",
-        }}
-      >
-        Order Cart
       </NavLink>
       <NavLink
         to="/login"

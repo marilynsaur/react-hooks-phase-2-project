@@ -3,8 +3,8 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import PieMenu from "./PieMenu";
 import Login from "./Login";
+import LoginForm from "./LoginForm";
 import NavBar from "./NavBar";
-import OrderCart from "./OrderCart";
 import CustomOrder from "./CustomOrder";
 import { CartProvider } from "./CartContext";
 
@@ -21,6 +21,10 @@ function App() {
       .then((items) => setItems(items));
   }, []);
    
+
+  function handleDeleteItem(deletedItem) {
+    console.log("In ShoppingCart:", deletedItem);
+  }
 
   function handleUpdateItem(updatedItem) {
     console.log("In ShoppingCart:", updatedItem);
@@ -42,16 +46,13 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/PieMenu">
-          <PieMenu items ={items} handleUpdateItem={handleAddItem} />
+          <PieMenu items ={items} handleUpdateItem={handleAddItem}   onDeleteItem={handleDeleteItem}/>
         </Route>
         <Route exact path="/CustomOrder">
           <CustomOrder onAddItem={handleAddItem} />
         </Route>
         <Route exact path="/login">
           <Login />
-        </Route>
-        <Route exact path="/OrderCart">
-          <OrderCart items ={items} />
         </Route>
         <Route exact path="/">
           <Home />
