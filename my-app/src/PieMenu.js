@@ -29,7 +29,7 @@ function PieMenu({items,handleUpdateItem,onDeleteItem}) {
    <div>
     <header className="container">
     <br/>
-      <h1 className="bigbigBanner" >Pie Menu</h1>
+      <h1 className="center" >Pie Menu</h1>
       <br/>
       <span className="count"> Items In Cart:{cart.length}</span>
       <br/>

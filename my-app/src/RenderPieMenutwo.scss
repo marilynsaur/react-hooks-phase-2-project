@@ -14,8 +14,9 @@ header.container {
 }
 
 header .count {
-  float: right;
-  color: #333333;
+  
+  color: black;
+  font-size: 25px;
 }
 
 body {
@@ -34,9 +35,16 @@ body {
 
    .center {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: black;
     padding: 10px;
+   }
+
+   .centerTwo {
+    text-align: center;
+   
+    color: black;
+    
    }
 
    .App {
@@ -133,4 +141,18 @@ body {
         height:12rem;
     }
   }
+}
+
+.image-placeholder {
+  background-color: #eee;
+  display: flex;
+  height: 180px;
+  margin: 5px;
+  width: 260px;
+}
+
+.image-placeholder > h4 {
+  align-self: center;
+  text-align: center;
+  width: 100%;
 }

@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from "react";
 import aboutheader from './aboutheader.png';
+import pieFont from './pieFont.png';
 
 
 function CustomOrder({onAddItem}) {
   const [isInCart, setIsInCart] = useState(false);
+  const [isVisible,setIsVisible] = useState(false);
+
+  const visibleHandleClick = event => {
+    setIsVisible(current => !current);
+  };
+
+  
 
   console.log(onAddItem)
   const [formData, setFormData] = useState({
@@ -56,7 +64,7 @@ function CustomOrder({onAddItem}) {
 
   return (
  
-    <div className="center">
+    <div className="centerTwo">
        <h3>Not seeing a Pie you want? have Our bakers create a custom Pie for you!</h3>
  <header><img src={aboutheader} alt="aboutheader" /></header>
     <form  className="App"onSubmit={handleSubmit}>
@@ -69,7 +77,7 @@ function CustomOrder({onAddItem}) {
   <input type="text" id="image" value={formData.image}
    onChange={handleChange} name="image"/>
    
-  <label >Description:</label>
+  <label >Description:</label> 
   <input id="description" value={formData.description}
    onChange={handleChange}name="description"></input>
  
@@ -78,7 +86,7 @@ function CustomOrder({onAddItem}) {
    onChange={handleChange} name="price"></input>  
    <br/>
    <br/>
-  <button type="submit">Add A Custom Pie</button>
+  <button type="submit"onClick={visibleHandleClick}>Add A Custom Pie</button>
   </form>
 
 
@@ -86,14 +94,16 @@ function CustomOrder({onAddItem}) {
 
    
     <div className="wrapper">
-    <div className="card">
- <img src={formData.image} className="card__img"/>
+    <div className="card" style={{visibility:isVisible ? 'visible':'hidden'}}>
+     
+ <img src={formData.image} className="card__img" placeholder="Describe yourself here..."/>
+ 
  <div className="card__body">
  <div className="card__title">{formData.name}</div>
   <p className="card__description">{formData.description}</p>
   <h3 className="card__price">{formData.price}</h3>
 
-<button onClick={handleClick} className="card__btn">{isInCart ? "in-cart" : "Add to Cart"}</button> 
+<button  className="card__btn">{isInCart ? "in-cart" : "Add to Cart"}</button> 
 </div>
 </div>
 </div>

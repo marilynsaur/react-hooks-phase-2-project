@@ -5,7 +5,7 @@
       "name": "brown sugar pecan pie",
       "image": "https://www.challengedairy.com/sites/default/files/recipe/images/recipe_brown_sugar_pecan_pie_2280_0.jpg",
       "description": "delicious pie",
-      "price": 20.67
+      "price": 20
     },
     {
       "id": 4,
@@ -13,6 +13,20 @@
       "image": "https://www.inspiredtaste.net/wp-content/uploads/2022/07/Easy-Homemade-Blueberry-Pie-2-1200.jpg",
       "description": "A scrumptious pie!",
       "price": 15
+    },
+    {
+      "name": "strawberry",
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/strawberry-pie-recipe-1648660021.jpeg?crop=1.00xw:1.00xh;0,0&resize=980:*",
+      "description": "very good pie",
+      "price": "23",
+      "id": 5
+    },
+    {
+      "name": "strawberry",
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/strawberry-pie-recipe-1648660021.jpeg?crop=1.00xw:1.00xh;0,0&resize=980:*",
+      "description": "very good pie",
+      "price": "23",
+      "id": 6
     }
   ]
 }

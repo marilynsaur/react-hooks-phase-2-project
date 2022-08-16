@@ -20,12 +20,12 @@ function RenderPieMenu({OnePie,onDeleteItem}) {
     console.log(onDeleteItem);
   }
 
-  function handleDeleteClick() {
+  function handleDeleteClick(id) {
     fetch(`http://localhost:3000/pies/${OnePie.id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
-      .then(() => onDeleteItem(OnePie.filter(item => id !== item.id )));
+      .then(() => onDeleteItem(OnePie));
   }
 
 return (
@@ -36,6 +36,7 @@ return (
   <div>
 <button className="card__btn" onClick={handleDeleteClick}>X</button>
 </div>
+
  <img src={OnePie.image} className="card__img"/>
  <div className="card__body">
  <div className="card__title">{OnePie.name}</div>

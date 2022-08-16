@@ -78,7 +78,7 @@
   header .count {
     float: right;
     color:black;
-   
+    font-size: 12px;
    
   }
 
@@ -463,9 +463,8 @@
 
    .bigbigBanner  {
     text-align: center;
-    border: transparent;
-    background-color: pink;
+    font-size: 1.4rem;
     color: black;
-    font-size: 40px;
+    padding: 10px;
 };
 
