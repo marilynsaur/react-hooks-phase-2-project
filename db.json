@@ -20,13 +20,6 @@
       "description": "very good pie",
       "price": "23",
       "id": 5
-    },
-    {
-      "name": "strawberry",
-      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/strawberry-pie-recipe-1648660021.jpeg?crop=1.00xw:1.00xh;0,0&resize=980:*",
-      "description": "very good pie",
-      "price": "23",
-      "id": 6
     }
   ]
 }
