@@ -70,17 +70,18 @@ function CustomOrder({onAddItem}) {
     <form  className="App"onSubmit={handleSubmit}>
 
 
-  <label >Name:</label>
+  <label >name:</label>
   <input type="text"id="name" value={formData.name}
         onChange={handleChange}name="name"/>
-  <label >Image:</label>
+      <br/>
+  <label >image:</label>
   <input type="text" id="image" value={formData.image}
    onChange={handleChange} name="image"/>
-   
-  <label >Description:</label> 
+     <br/>
+  <label >describe:</label> 
   <input id="description" value={formData.description}
    onChange={handleChange}name="description"></input>
- 
+   <br/>
   <label>price:</label>
   <input id="price"  value={formData.price}
    onChange={handleChange} name="price"></input>  

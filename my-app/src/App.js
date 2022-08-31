@@ -10,7 +10,7 @@ import { CartProvider } from "./CartContext";
 
 
 function App() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+ // const [selectedCategory, setSelectedCategory] = useState("All");
   const [items, setItems] = useState([]);
 
 
